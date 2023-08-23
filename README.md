@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=devitsah&label=Profile%20views&color=0e75b6&style=flat" alt="devitsah" /> </p>
 
-- 🌱 I’m currently learning **for Backend Web Development.**
+- 🌱 I’m currently learning ** Backend Web Development.**
 
 - 📫 How to reach me **sahdevit73@gmail.com**
 
