@@ -1,11 +1,18 @@
-<h1 align="center">Hi 👋, I'm Devit Sah.</h1>
-<h3 align="center">A passionate software + fullstack developer from Nepal.</h3>
+<h1 align="center">Hi 👋, I'm Devit Sah</h1>
+<h3 align="center">A Computer Science Undergraduate from Thapar University</h3>
+
+<img
+  align="right"
+  alt="coding-gif"
+  width="400"
+  src="[https://user-images.githubusercontent.com/55389276/140866485-8fb1c876-9a8f-4d6a-98dc-08c4981eaf70.gif](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHk3d2dtaXJlZ2ljdnhleTF6NzA4YzR0c2ZqemQ4OHE3bXJkcDhnciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u2pmTWUi0MXjyrMaVj/giphy.gif)"
+/>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=devitsah&label=Profile%20views&color=0e75b6&style=flat" alt="devitsah" /> </p>
 
-- 🌱 I’m currently learning ** Backend Web Development.**
+- 🌱 I’m currently learning AWS and AI/ML.
 
-- 📫 How to reach me **sahdevit73@gmail.com**
+- 📫 How to reach me sahdevit73@gmail.com/dsah_be22@thapar.edu
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
