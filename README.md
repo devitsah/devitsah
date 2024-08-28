@@ -1,5 +1,15 @@
-# 💫 About Me:
-<h1 align="center">Hi 👋, I'm Sharath Chandra Chinnarigari</h1><br><h3 align="center">A Computer Science Undergraduate from Thapar University</h3><br><br><img<br>  align="right"<br>  alt="coding-gif"<br>  width="400"<br>  src="https://user-images.githubusercontent.com/55389276/140866485-8fb1c876-9a8f-4d6a-98dc-08c4981eaf70.gif"<br>/><br><br>- 🌱 I’m currently learning **Devops , Blockchain** - 📫 Contact<br>**csharathchandra3@gmail.com** | **cchandra_be22@thapar.edu**
+<h1 align="center">Hi 👋, I'm Devit Sah</h1>
+<h3 align="center">A Computer Science Undergraduate from Thapar University</h3>
+
+<img
+  align="right"
+  alt="coding-gif"
+  width="300"
+  src="https://giphy.com/gifs/CapgeminiIndia-coding-techchallenge2020-techchallenge-u2pmTWUi0MXjyrMaVj"
+/>
+
+- 🌱 I’m currently learning AWS and AI/ML
+- 📫 Contact sahdevit73@gmail.com | dsah_be22@thapar.edu
 
 
 ## 🌐 Socials:
