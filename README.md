@@ -4,7 +4,7 @@
 <img
   align="right"
   alt="coding-gif"
-   border-radius: 50%
+style="border-radius: 50%;"
   width="300"
   src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHk3d2dtaXJlZ2ljdnhleTF6NzA4YzR0c2ZqemQ4OHE3bXJkcDhnciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u2pmTWUi0MXjyrMaVj/giphy.gif"
 />
