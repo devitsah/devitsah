@@ -5,7 +5,7 @@
   align="right"
   alt="coding-gif"
   width="300"
-  src="https://giphy.com/gifs/CapgeminiIndia-coding-techchallenge2020-techchallenge-u2pmTWUi0MXjyrMaVj"
+  src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmdhNnc0cGl3anV4bml6Z245bzByajltdzNzMnN2ODBwcWtiZXVwYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u2pmTWUi0MXjyrMaVj/giphy.gif"
 />
 
 - 🌱 I’m currently learning AWS and AI/ML
