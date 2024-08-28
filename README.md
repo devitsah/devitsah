@@ -7,11 +7,11 @@
   width="300"
   src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmdhNnc0cGl3anV4bml6Z245bzByajltdzNzMnN2ODBwcWtiZXVwYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u2pmTWUi0MXjyrMaVj/giphy.gif"
 />
+[![](https://visitcount.itsvg.in/api?id=devitsah&icon=0&color=0)](https://visitcount.itsvg.in) 
 
 - 🌱 I’m currently learning AWS and AI/ML
 - 📫 Contact sahdevit73@gmail.com | dsah_be22@thapar.edu
 
-[![](https://visitcount.itsvg.in/api?id=devitsah&icon=0&color=0)](https://visitcount.itsvg.in) 
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
