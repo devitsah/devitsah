@@ -11,6 +11,7 @@
 - 🌱 I’m currently learning AWS and AI/ML
 - 📫 Contact sahdevit73@gmail.com | dsah_be22@thapar.edu
 
+[![](https://visitcount.itsvg.in/api?id=devitsah&icon=0&color=0)](https://visitcount.itsvg.in) 
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
@@ -51,6 +52,6 @@
 ![](https://github-contributor-stats.vercel.app/api?username=devitsah&limit=5&theme=default_repocard&combine_all_yearly_contributions=true)
 
 ---
-[![](https://visitcount.itsvg.in/api?id=devitsah&icon=0&color=0)](https://visitcount.itsvg.in)
+
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
