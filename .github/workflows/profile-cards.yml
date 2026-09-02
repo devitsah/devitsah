@@ -1,0 +1,41 @@
+name: Build GitHub Stats / Snake Frames
+
+on:
+  schedule:
+    - cron: "30 */12 * * *"
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Generate Snake Animation"]
+    types: [completed]
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Build self-contained frame SVGs
+        run: python3 generator/build_stats_frames.py
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: .
+          keep_history: true
+          fqdn: false
+          jekyll: false
+          commit_message: "Update stats/snake frames [skip ci]"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
