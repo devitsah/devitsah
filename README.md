@@ -26,14 +26,11 @@
 
 ### 🧭 About Me
 
-- 💼 Software Developer Intern @ **ISSQUARED, Inc.** — shipping production apps in ASP.NET Core, Angular & PostgreSQL
-- 🚀 Building **DashGen AI** — an LLM-powered dashboard generator (natural language → SQL → live visualizations)
-- 🔧 Also architecting **APIForge** — a 6-service microservices API management platform (FastAPI, Kafka, Redis)
+- 💼  Currently working as a .NET Developer Intern at Issquared India Pvt Ltd, building backend APIs and business logic with .NET & PostgreSQL
 - 🌱 Deepening my work in **RAG, vector embeddings, and local LLM inference** with Ollama
-- 🎓 Pre-final year CSE @ Thapar Institute of Engineering and Technology
+- 🎓 Completed BE-CSE @ Thapar Institute of Engineering and Technology
 - 📫 Reach me at **sahdevit76@gmail.com**
 
----
 
 ### 🛠️ Tech Stack
 
