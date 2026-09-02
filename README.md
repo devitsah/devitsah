@@ -119,14 +119,12 @@ Automated DOCX → PDF pipeline built on reusable OpenXML templates.
 </div>
 
 
-
 ### 🐍 Contribution Snake
- 
+
 <div align="center">
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:2563EB,100:0891B2&height=3&width=1180" width="100%"/>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devitsah/devitsah/output/github-snake-dark.svg">
-  <img alt="Snake eating my contributions" src="https://raw.githubusercontent.com/devitsah/devitsah/output/github-snake.svg" width="100%"/>
-</picture>
+
+
+
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0891B2,100:2563EB&height=3&width=1180" width="100%"/>
 </div>
