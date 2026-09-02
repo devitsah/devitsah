@@ -43,9 +43,17 @@ SOURCES = {
         f"?username={USERNAME}&layout=compact&hide_border=true"
         "&title_color=2563EB&text_color=475569&bg_color=FFFFFF"
     ),
-    "snake-frame.svg": (
-        f"https://raw.githubusercontent.com/{USERNAME}/{USERNAME}/output/github-snake.svg"
-    ),
+    # snake-frame.svg is handled separately below: it's built from the
+    # snake SVG generated earlier in THIS SAME job run (dist/github-snake.svg),
+    # not fetched over the network from the output branch. Fetching it from
+    # the output branch was racy: this workflow and the snake-generation
+    # step used to be two separate workflows publishing to the same output
+    # branch, and whichever one published last would wipe out the other's
+    # files, causing the snake (or the stats cards) to intermittently 404.
+}
+
+LOCAL_SOURCES = {
+    "snake-frame.svg": "dist/github-snake.svg",
 }
 
 FALLBACK_SIZE = {
@@ -128,20 +136,26 @@ def frame_svg(name: str, img_w: float, img_h: float, inner_content: str, uid: st
 '''
 
 
+def build_one(out_name, raw, uid):
+    w, h = intrinsic_size(raw, FALLBACK_SIZE[out_name])
+    inner = extract_inner_svg(raw)
+    svg = frame_svg(out_name, w, h, inner, uid=uid)
+    out_path = os.path.join("dist", out_name)
+    with open(out_path, "w") as f:
+        f.write(svg)
+    print(f"wrote {out_path} ({w:.0f}x{h:.0f})")
+
+
 def main():
+    global os
     import os
     os.makedirs("dist", exist_ok=True)
     ok = True
+
     for i, (out_name, url) in enumerate(SOURCES.items()):
         try:
             raw = fetch(url)
-            w, h = intrinsic_size(raw, FALLBACK_SIZE[out_name])
-            inner = extract_inner_svg(raw)
-            svg = frame_svg(out_name, w, h, inner, uid=f"u{i}")
-            out_path = os.path.join("dist", out_name)
-            with open(out_path, "w") as f:
-                f.write(svg)
-            print(f"wrote {out_path} ({w:.0f}x{h:.0f})")
+            build_one(out_name, raw, uid=f"u{i}")
         except Exception as e:
             print(f"WARN: failed to build {out_name}: {e}", file=sys.stderr)
             ok = False
@@ -159,6 +173,30 @@ def main():
                 print(f"kept previous {out_name}")
             except Exception as e2:
                 print(f"WARN: no previous {out_name} to keep: {e2}", file=sys.stderr)
+
+    # Snake: built from the file this same job just generated locally
+    # (no network round-trip to the output branch, so no race condition).
+    for i, (out_name, local_path) in enumerate(LOCAL_SOURCES.items(), start=len(SOURCES)):
+        try:
+            with open(local_path, "rb") as f:
+                raw = f.read()
+            build_one(out_name, raw, uid=f"u{i}")
+        except Exception as e:
+            print(f"WARN: failed to build {out_name} from {local_path}: {e}", file=sys.stderr)
+            ok = False
+            try:
+                prev_url = (
+                    f"https://raw.githubusercontent.com/{USERNAME}/{USERNAME}"
+                    f"/output/{out_name}"
+                )
+                prev = fetch(prev_url)
+                out_path = os.path.join("dist", out_name)
+                with open(out_path, "wb") as f:
+                    f.write(prev)
+                print(f"kept previous {out_name}")
+            except Exception as e2:
+                print(f"WARN: no previous {out_name} to keep: {e2}", file=sys.stderr)
+
     if not ok:
         print("Some frames were not updated this run.")
 
