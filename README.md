@@ -133,4 +133,3 @@ Automated DOCX → PDF pipeline built on reusable OpenXML templates.
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0891B2,100:2563EB&height=3&width=1180" width="100%"/>
 </div>
 
-> ⚠️ If the snake looks broken, the `Generate Snake Animation` workflow hasn't run yet in this repo — go to the **Actions** tab → run it once manually (`Run workflow`). See `SETUP-CHECKLIST.md`, Phase 3.
