@@ -108,15 +108,8 @@ Automated DOCX → PDF pipeline built on reusable OpenXML templates.
 </tr>
 </table>
 
----
 
-### 📊 GitHub Stats
 
-<div align="center">
-<img src="https://raw.githubusercontent.com/devitsah/devitsah/output/stats-frame.svg" height="200"/>
-<img src="https://raw.githubusercontent.com/devitsah/devitsah/output/streak-frame.svg" height="200"/>
-<img src="https://raw.githubusercontent.com/devitsah/devitsah/output/langs-frame.svg" height="200"/>
-</div>
 
 
 ### 🐍 Contribution Snake
