@@ -9,7 +9,7 @@
 <br/>
 
 <a href="https://www.linkedin.com/in/devit-sah-d780/">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=2563EB&center=true&vCenter=true&width=650&lines=Building+AI-powered+SaaS+with+.NET+%26+Angular;Software+Developer+Intern+%40+ISSQUARED" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=2563EB&center=true&vCenter=true&width=650&lines=Building+AI-powered+SaaS+with+.NET+%26+Angular;Software+Developer" alt="Typing SVG" />
 </a>
 
 <br/>
