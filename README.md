@@ -9,7 +9,7 @@
 <br/>
 
 <a href="https://www.linkedin.com/in/devit-sah-d780/">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=7C3AED&center=true&vCenter=true&width=650&lines=Building+AI-powered+SaaS+with+.NET+%26+Angular;Currently+shipping+DashGen+AI+%F0%9F%9A%80;RAG+%C2%B7+Vector+Embeddings+%C2%B7+LLMs+(Ollama);Software+Developer+Intern+%40+ISSQUARED" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=7C3AED&center=true&vCenter=true&width=650&lines=Building+AI-powered+SaaS+with+.NET+%26+Angular;Software+Developer+Intern+%40+ISSQUARED" alt="Typing SVG" />
 </a>
 
 <br/>
@@ -83,9 +83,7 @@
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0891B2,100:7C3AED&height=3&width=1180" width="100%"/>
 </div>
 
-<p align="center"><sub>Regenerates every 12 hours from live contribution data — see <code>SETUP-CHECKLIST.md</code> to switch it on.</sub></p>
 
-<div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7C3AED,100:0891B2&height=100&section=footer" width="100%"/>
-</div>
+
+
 
