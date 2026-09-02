@@ -36,7 +36,7 @@ SOURCES = {
         "https://streak-stats.demolab.com/"
         f"?user={USERNAME}&hide_border=true&background=FFFFFF&stroke=2563EB"
         "&ring=0891B2&fire=10B981&currStreakLabel=2563EB&sideLabels=475569"
-        "&currStreakNum=0F172A&sideNums=0F172A&dates=94A3B8&titleColor=2563EB"
+        "&currStreakNum=0F172A&sideNums=0F172A&dates=FFFFFF&excludeDaysLabel=FFFFFF&titleColor=2563EB"
     ),
     "langs-frame.svg": (
         "https://github-readme-stats.vercel.app/api/top-langs/"
@@ -66,7 +66,7 @@ FALLBACK_SIZE = {
 UA = {"User-Agent": "Mozilla/5.0 (profile-card-builder)"}
 
 
-def fetch(url: str, attempts: int = 3) -> bytes:
+def fetch(url: str, attempts: int = 5) -> bytes:
     last_err = None
     for i in range(attempts):
         try:
@@ -76,7 +76,7 @@ def fetch(url: str, attempts: int = 3) -> bytes:
         except Exception as e:
             last_err = e
             if i < attempts - 1:
-                time.sleep(3 * (i + 1))  # simple backoff for rate limits
+                time.sleep(5 * (i + 1))  # 5s, 10s, 15s, 20s backoff
     raise last_err
 
 
