@@ -9,16 +9,16 @@
 <br/>
 
 <a href="https://www.linkedin.com/in/devit-sah-d780/">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=7C3AED&center=true&vCenter=true&width=650&lines=Building+AI-powered+SaaS+with+.NET+%26+Angular;Software+Developer+Intern+%40+ISSQUARED" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=2563EB&center=true&vCenter=true&width=650&lines=Building+AI-powered+SaaS+with+.NET+%26+Angular;Software+Developer+Intern+%40+ISSQUARED" alt="Typing SVG" />
 </a>
 
 <br/>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/devit-sah-d780/)
-[![Email](https://img.shields.io/badge/Email-7C3AED?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sahdevit76@gmail.com)
+[![Email](https://img.shields.io/badge/Email-2563EB?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sahdevit76@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/devitsah)
 
-![Profile Views](https://komarev.com/ghpvc/?username=devitsah&color=7C3AED&style=for-the-badge&label=PROFILE+VIEWS)
+![Profile Views](https://komarev.com/ghpvc/?username=devitsah&color=2563EB&style=for-the-badge&label=PROFILE+VIEWS)
 
 </div>
 
@@ -42,34 +42,87 @@
 
 ### 🚀 Featured Projects
 
-<div align="center">
+<table width="100%">
+<tr>
+<td width="50%" valign="top">
 
-| Project | Stack | What it does |
-|---|---|---|
-| 🧠 **[DashGen AI](https://github.com/devitsah)** | `.NET` `Angular` `Ollama` `PostgreSQL` | Turns natural-language prompts into validated SQL + live dashboards across Grafana, Power BI & custom widgets |
-| ⚙️ **[APIForge](https://github.com/devitsah)** | `FastAPI` `Kafka` `Redis` `Docker` | 6-service microservices API gateway with JWT auth, rate limiting & real-time analytics |
-| 👁️ **[ActiTrack](https://github.com/devitsah)** | `Flask` `Angular` `PostgreSQL` `Socket.IO` | Employee activity monitoring system with role-based live dashboards |
-| 📄 **[DocGen](https://github.com/devitsah)** | `.NET` `OpenXML` `PostgreSQL` | Template-driven document generation with automated DOCX → PDF conversion |
+#### 🧠 DashGen AI
+**Natural language → SQL → live dashboards**
 
-</div>
+Turns plain-English prompts into validated SQL and live dashboards across Grafana, Power BI & custom widgets.
+
+![.NET](https://img.shields.io/badge/.NET-2563EB?style=flat-square&logo=dotnet&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-0891B2?style=flat-square&logo=angular&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-10B981?style=flat-square&logo=ollama&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-475569?style=flat-square&logo=postgresql&logoColor=white)
+
+**[View Project →](https://github.com/devitsah)**
+
+</td>
+<td width="50%" valign="top">
+
+#### ⚙️ APIForge
+**6-service microservices API gateway**
+
+JWT auth, rate limiting & real-time analytics across a Kafka-backed, Dockerized service mesh.
+
+![FastAPI](https://img.shields.io/badge/FastAPI-2563EB?style=flat-square&logo=fastapi&logoColor=white)
+![Kafka](https://img.shields.io/badge/Kafka-0891B2?style=flat-square&logo=apachekafka&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-10B981?style=flat-square&logo=redis&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-475569?style=flat-square&logo=docker&logoColor=white)
+
+**[View Project →](https://github.com/devitsah)**
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 👁️ ActiTrack
+**Live employee activity monitoring**
+
+Role-based, real-time activity dashboards built with Angular and Socket.IO for live updates.
+
+![Flask](https://img.shields.io/badge/Flask-2563EB?style=flat-square&logo=flask&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-0891B2?style=flat-square&logo=angular&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-10B981?style=flat-square&logo=postgresql&logoColor=white)
+![Socket.IO](https://img.shields.io/badge/Socket.IO-475569?style=flat-square&logo=socketdotio&logoColor=white)
+
+**[View Project →](https://github.com/devitsah)**
+
+</td>
+<td width="50%" valign="top">
+
+#### 📄 DocGen
+**Template-driven document generation**
+
+Automated DOCX → PDF pipeline built on reusable OpenXML templates.
+
+![.NET](https://img.shields.io/badge/.NET-2563EB?style=flat-square&logo=dotnet&logoColor=white)
+![OpenXML](https://img.shields.io/badge/OpenXML-0891B2?style=flat-square&logo=xml&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-10B981?style=flat-square&logo=postgresql&logoColor=white)
+
+**[View Project →](https://github.com/devitsah)**
+
+</td>
+</tr>
+</table>
 
 ---
 
 ### 📊 GitHub Stats
 
 <div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=devitsah&show_icons=true&theme=default&hide_border=true&title_color=7C3AED&icon_color=0891B2&text_color=475569&bg_color=FFFFFF00&count_private=true&hide_rank=true" height="165"/>
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=devitsah&hide_border=true&background=FFFFFF00&stroke=7C3AED&ring=0891B2&fire=10B981&currStreakLabel=7C3AED&sideLabels=475569&currStreakNum=0F172A&sideNums=0F172A&dates=94A3B8&titleColor=7C3AED" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=devitsah&layout=compact&hide_border=true&title_color=7C3AED&text_color=475569&bg_color=FFFFFF00" height="165"/>
+<img src="https://github-readme-stats.vercel.app/api?username=devitsah&show_icons=true&theme=default&hide_border=true&title_color=2563EB&icon_color=0891B2&text_color=475569&bg_color=FFFFFF00&count_private=true&hide_rank=true" height="165"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=devitsah&hide_border=true&background=FFFFFF00&stroke=2563EB&ring=0891B2&fire=10B981&currStreakLabel=2563EB&sideLabels=475569&currStreakNum=0F172A&sideNums=0F172A&dates=94A3B8&titleColor=2563EB" height="165"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=devitsah&layout=compact&hide_border=true&title_color=2563EB&text_color=475569&bg_color=FFFFFF00" height="165"/>
 </div>
-
-> Public stats instances rate-limit heavily. If cards show "API rate limit exceeded," self-host `github-readme-stats` — see `SETUP-CHECKLIST.md`, Phase 2.
 
 
 ### 🐍 Contribution Snake
 
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:7C3AED,100:0891B2&height=3&width=1180" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:2563EB,100:0891B2&height=3&width=1180" width="100%"/>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devitsah/devitsah/output/github-snake-dark.svg" />
@@ -77,10 +130,7 @@
   <img alt="Snake eating my contributions" src="https://raw.githubusercontent.com/devitsah/devitsah/output/github-snake.svg" />
 </picture>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0891B2,100:7C3AED&height=3&width=1180" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0891B2,100:2563EB&height=3&width=1180" width="100%"/>
 </div>
 
-
-
-
-
+> ⚠️ If the snake looks broken, the `Generate Snake Animation` workflow hasn't run yet in this repo — go to the **Actions** tab → run it once manually (`Run workflow`). See `SETUP-CHECKLIST.md`, Phase 3.
