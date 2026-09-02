@@ -1,18 +1,23 @@
 #!/usr/bin/env python3
 """
-Fetches the live GitHub stats / streak / top-langs / snake SVGs, base64-embeds
-each one into a small self-contained "frame" SVG with a rounded, always-light
-background and an animated moving dashed border. Because the source image is
-baked in as a data URI at build time (not linked at render time), the result
-works correctly when GitHub displays it as <img src="...frame.svg">  -- browsers
-block an SVG-used-as-<img> from fetching further external resources, so a
-plain <image href="https://..."> nested inside a wrapper SVG does not render.
+Fetches the live GitHub stats / streak / top-langs / snake SVGs and nests
+each one, as native inline <svg> content (not a rasterized/base64 <image>),
+inside a small self-contained "frame" SVG with a rounded, always-light
+background and an animated moving dashed border.
+
+Why inline <svg> instead of <image href="data:...">: embedding a source
+SVG via <image> effectively treats it as an opaque raster reference in most
+browsers when rendered inside a GitHub README, so any SMIL <animate> tags
+in the source (like the contribution snake) freeze on the first frame
+(see https://github.com/github/markup/issues/1864). Nesting the source's
+markup directly as a child <svg> element instead keeps it as live vector
+content in the same document, so its animations keep running normally.
 
 Run via .github/workflows/profile-cards.yml on a schedule.
 """
-import base64
 import re
 import sys
+import time
 import urllib.request
 
 USERNAME = "devitsah"
@@ -25,10 +30,9 @@ SOURCES = {
         "&count_private=true&hide_rank=true"
     ),
     "streak-frame.svg": (
-        # github-readme-streak-stats.herokuapp.com is not a live public
-        # instance (that name is only a placeholder used in the project's
-        # "deploy your own" docs). streak-stats.demolab.com is the actual
-        # public endpoint.
+        # streak-stats.demolab.com is the real public instance; the old
+        # github-readme-streak-stats.herokuapp.com URL used here previously
+        # was never a live public endpoint.
         "https://streak-stats.demolab.com/"
         f"?user={USERNAME}&hide_border=true&background=FFFFFF&stroke=2563EB"
         "&ring=0891B2&fire=10B981&currStreakLabel=2563EB&sideLabels=475569"
@@ -39,19 +43,16 @@ SOURCES = {
         f"?username={USERNAME}&layout=compact&hide_border=true"
         "&title_color=2563EB&text_color=475569&bg_color=FFFFFF"
     ),
-    # NOTE: the snake is intentionally NOT built into a frame here.
-    # Baking an animated SVG into a base64 data URI and nesting it via
-    # <image href="data:..."> inside another SVG does not reliably keep
-    # the SMIL animation running once GitHub renders it in a README
-    # (see https://github.com/github/markup/issues/1864) — you just get a
-    # frozen first frame. The snake stays a plain, unwrapped <img> pointing
-    # straight at the output branch instead; see README.md.
+    "snake-frame.svg": (
+        f"https://raw.githubusercontent.com/{USERNAME}/{USERNAME}/output/github-snake.svg"
+    ),
 }
 
 FALLBACK_SIZE = {
     "stats-frame.svg": (495, 195),
     "streak-frame.svg": (495, 195),
     "langs-frame.svg": (300, 300),
+    "snake-frame.svg": (880, 130),
 }
 
 UA = {"User-Agent": "Mozilla/5.0 (profile-card-builder)"}
@@ -67,7 +68,6 @@ def fetch(url: str, attempts: int = 3) -> bytes:
         except Exception as e:
             last_err = e
             if i < attempts - 1:
-                import time
                 time.sleep(3 * (i + 1))  # simple backoff for rate limits
     raise last_err
 
@@ -84,7 +84,21 @@ def intrinsic_size(svg_bytes: bytes, fallback):
     return fallback
 
 
-def frame_svg(name: str, img_w: float, img_h: float, mime: str, b64: str, uid: str) -> str:
+def extract_inner_svg(svg_bytes: bytes) -> str:
+    """Strip the outer <svg ...> ... </svg> wrapper, keeping only the
+    children, so we can re-nest them inside our own <svg> element."""
+    text = svg_bytes.decode("utf-8", errors="ignore")
+    m_open = re.search(r"<svg\b[^>]*>", text, re.IGNORECASE | re.DOTALL)
+    if not m_open:
+        raise ValueError("no <svg> opening tag found in source")
+    start = m_open.end()
+    end = text.rfind("</svg>")
+    if end == -1:
+        raise ValueError("no </svg> closing tag found in source")
+    return text[start:end]
+
+
+def frame_svg(name: str, img_w: float, img_h: float, inner_content: str, uid: str) -> str:
     pad = 8
     radius = 16
     aspect = img_w / img_h
@@ -103,7 +117,9 @@ def frame_svg(name: str, img_w: float, img_h: float, mime: str, b64: str, uid: s
 </defs>
 <rect x="1" y="1" width="{canvas_w-2:.0f}" height="{canvas_h-2:.0f}" rx="{radius+pad-1}" fill="#FFFFFF"/>
 <g clip-path="url(#clip{uid})">
-  <image href="data:{mime};base64,{b64}" x="{pad+2}" y="{pad+2}" width="{inner_w-4:.0f}" height="{inner_h-4:.0f}" preserveAspectRatio="xMidYMid meet"/>
+  <svg x="{pad+2}" y="{pad+2}" width="{inner_w-4:.0f}" height="{inner_h-4:.0f}" viewBox="0 0 {img_w:.0f} {img_h:.0f}" preserveAspectRatio="xMidYMid meet">
+    {inner_content}
+  </svg>
 </g>
 <rect x="3" y="3" width="{canvas_w-6:.0f}" height="{canvas_h-6:.0f}" rx="{radius+pad-3}" fill="none" stroke="url(#bg{uid})" stroke-width="3" stroke-linecap="round" stroke-dasharray="18 10">
   <animate attributeName="stroke-dashoffset" values="0;-56" dur="3.5s" repeatCount="indefinite"/>
@@ -120,8 +136,8 @@ def main():
         try:
             raw = fetch(url)
             w, h = intrinsic_size(raw, FALLBACK_SIZE[out_name])
-            b64 = base64.b64encode(raw).decode()
-            svg = frame_svg(out_name, w, h, "image/svg+xml", b64, uid=f"u{i}")
+            inner = extract_inner_svg(raw)
+            svg = frame_svg(out_name, w, h, inner, uid=f"u{i}")
             out_path = os.path.join("dist", out_name)
             with open(out_path, "w") as f:
                 f.write(svg)
@@ -144,8 +160,6 @@ def main():
             except Exception as e2:
                 print(f"WARN: no previous {out_name} to keep: {e2}", file=sys.stderr)
     if not ok:
-        # Don't fail the whole workflow just because one source (e.g. the
-        # snake, before it has been generated once) wasn't ready yet.
         print("Some frames were not updated this run.")
 
 
