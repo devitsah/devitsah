@@ -155,49 +155,7 @@
 
 <line x1="470" y1="464.29999999999995" x2="1140" y2="464.29999999999995" stroke="rgba(15,23,42,0.10)"/>
 <text x="470" y="482.29999999999995" font-size="10" letter-spacing="3" fill="#94A3B8">NOW.BUILDING</text>
-
-        <g opacity="0">
-          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.82;1" dur="4.4s" begin="0.0s;proj0.end+8.8s" id="proj0" fill="freeze"/>
-          <animateTransform attributeName="transform" type="translate" values="18,0;0,0;0,0;-18,0" keyTimes="0;0.08;0.82;1" dur="4.4s" begin="0.0s;proj0t.end+8.8s" id="proj0t" fill="freeze"/>
-          
-    <g>
-      <rect x="470" y="490.29999999999995" width="396" height="70" rx="10" fill="#FBFBFE" stroke="rgba(8,145,178,0.20)" stroke-width="1"/>
-      <rect x="470" y="490.29999999999995" width="4" height="70" rx="2" fill="#10B981"/>
-      <g transform="translate(0,0)">
-        <animateTransform attributeName="transform" type="scale" values="0.5;1.06;1" keyTimes="0;0.5;1" dur="0.5s" additive="sum" fill="freeze"/>
-        
-        <g stroke="#0891B2" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M482,519.3 q-10,-14 2,-20 q10,-5 14,4 q10,-9 18,0 q8,8 -2,16 q10,6 2,18 q-6,10 -18,6 q-4,10 -16,6 q-10,-4 -6,-14 q-10,-2 -8,-14 q1,-8 14,-2 z"/>
-          <circle cx="498" cy="521.3" r="1.6" fill="#10B981" stroke="none"/>
-          <circle cx="510" cy="528.3" r="1.6" fill="#10B981" stroke="none"/>
-          <circle cx="505" cy="515.3" r="1.6" fill="#10B981" stroke="none"/>
-        </g>
-      </g>
-      <text x="538" y="522.3" font-size="13" font-weight="600" fill="#0F172A" letter-spacing="1">DASHGEN.AI</text>
-      <text x="538" y="538.3" font-size="10.5" fill="#64748B">NL -> SQL -> live dashboards</text>
-    </g>
-        </g>
-
-        <g opacity="0">
-          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.82;1" dur="4.4s" begin="4.4s;proj1.end+8.8s" id="proj1" fill="freeze"/>
-          <animateTransform attributeName="transform" type="translate" values="18,0;0,0;0,0;-18,0" keyTimes="0;0.08;0.82;1" dur="4.4s" begin="4.4s;proj1t.end+8.8s" id="proj1t" fill="freeze"/>
-          
-    <g>
-      <rect x="470" y="490.29999999999995" width="396" height="70" rx="10" fill="#FBFBFE" stroke="rgba(8,145,178,0.20)" stroke-width="1"/>
-      <rect x="470" y="490.29999999999995" width="4" height="70" rx="2" fill="#10B981"/>
-      <g transform="translate(0,0)">
-        <animateTransform attributeName="transform" type="scale" values="0.5;1.06;1" keyTimes="0;0.5;1" dur="0.5s" additive="sum" fill="freeze"/>
-        
-        <g stroke="#0891B2" stroke-width="2.2" fill="none" stroke-linejoin="round">
-          <polygon points="504.0,505.3 521.3,515.3 521.3,535.3 504.0,545.3 486.7,535.3 486.7,515.3"/>
-          <circle cx="504" cy="525.3" r="4" fill="#10B981" stroke="none"/>
-          <line x1="504" y1="525.3" x2="504.0" y2="516.3"/><line x1="504" y1="525.3" x2="511.8" y2="520.8"/><line x1="504" y1="525.3" x2="511.8" y2="529.8"/><line x1="504" y1="525.3" x2="504.0" y2="534.3"/><line x1="504" y1="525.3" x2="496.2" y2="529.8"/><line x1="504" y1="525.3" x2="496.2" y2="520.8"/>
-        </g>
-      </g>
-      <text x="538" y="522.3" font-size="13" font-weight="600" fill="#0F172A" letter-spacing="1">APIFORGE</text>
-      <text x="538" y="538.3" font-size="10.5" fill="#64748B">6-service microservice gateway</text>
-    </g>
-        </g>
+    
 
         <g opacity="0">
           <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.82;1" dur="4.4s" begin="8.8s;proj2.end+8.8s" id="proj2" fill="freeze"/>
