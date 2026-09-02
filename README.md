@@ -3,7 +3,6 @@
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/devitsah/devitsah/main/light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devitsah/devitsah/main/dark.svg">
-  
   <img alt="Devit Sah — profile.sh --live" src="https://raw.githubusercontent.com/devitsah/devitsah/main/light.svg" width="100%">
 </picture>
 
