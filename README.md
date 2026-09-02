@@ -113,9 +113,9 @@ Automated DOCX → PDF pipeline built on reusable OpenXML templates.
 ### 📊 GitHub Stats
 
 <div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=devitsah&show_icons=true&theme=default&hide_border=true&title_color=2563EB&icon_color=0891B2&text_color=475569&bg_color=FFFFFF00&count_private=true&hide_rank=true" height="165"/>
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=devitsah&hide_border=true&background=FFFFFF00&stroke=2563EB&ring=0891B2&fire=10B981&currStreakLabel=2563EB&sideLabels=475569&currStreakNum=0F172A&sideNums=0F172A&dates=94A3B8&titleColor=2563EB" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=devitsah&layout=compact&hide_border=true&title_color=2563EB&text_color=475569&bg_color=FFFFFF00" height="165"/>
+<img src="https://raw.githubusercontent.com/devitsah/devitsah/main/assets/stats-frame.svg" height="200"/>
+<img src="https://raw.githubusercontent.com/devitsah/devitsah/main/assets/streak-frame.svg" height="200"/>
+<img src="https://raw.githubusercontent.com/devitsah/devitsah/main/assets/langs-frame.svg" height="200"/>
 </div>
 
 
@@ -124,12 +124,7 @@ Automated DOCX → PDF pipeline built on reusable OpenXML templates.
 <div align="center">
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:2563EB,100:0891B2&height=3&width=1180" width="100%"/>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devitsah/devitsah/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/devitsah/devitsah/output/github-snake.svg" />
-  <img alt="Snake eating my contributions" src="https://raw.githubusercontent.com/devitsah/devitsah/output/github-snake.svg" />
-</picture>
+<img alt="Snake eating my contributions" src="https://raw.githubusercontent.com/devitsah/devitsah/main/assets/snake-frame.svg" width="100%"/>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0891B2,100:2563EB&height=3&width=1180" width="100%"/>
 </div>
-
