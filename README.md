@@ -124,7 +124,7 @@ Automated DOCX → PDF pipeline built on reusable OpenXML templates.
 <div align="center">
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:2563EB,100:0891B2&height=3&width=1180" width="100%"/>
 
-
+<img alt="Snake eating my contributions" src="https://raw.githubusercontent.com/devitsah/devitsah/output/snake-frame.svg" width="100%"/>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0891B2,100:2563EB&height=3&width=1180" width="100%"/>
 </div>
