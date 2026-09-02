@@ -68,13 +68,6 @@
 
 > Public stats instances rate-limit heavily. If cards show "API rate limit exceeded," self-host `github-readme-stats` — see `SETUP-CHECKLIST.md`, Phase 2.
 
-### 🏆 Trophies
-
-<div align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=devitsah&theme=flat&no-frame=true&no-bg=true&margin-w=8&row=1&column=7"/>
-</div>
-
----
 
 ### 🐍 Contribution Snake
 
