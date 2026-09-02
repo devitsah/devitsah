@@ -127,7 +127,7 @@
         <text x="1140" y="201" font-size="12.5" fill="#0F172A" text-anchor="end" textLength="210.0" lengthAdjust="spacingAndGlyphs">Thapar Institute of Engg &amp; Tech</text>
         <text x="470" y="224" font-size="12.5" fill="#64748B" letter-spacing="0.5">Status</text>
         <line x1="516.4" y1="220" x2="950.0" y2="220" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="1.5,3"/>
-        <text x="1140" y="224" font-size="12.5" fill="#0F172A" text-anchor="end" textLength="180.0" lengthAdjust="spacingAndGlyphs">Building + Learning</text>
+        <text x="1140" y="224" font-size="10.5" fill="#0F172A" text-anchor="end" textLength="180.0" lengthAdjust="spacingAndGlyphs">Building + Learning</text>
         <text x="470" y="259.65" font-size="12.5" fill="#64748B" letter-spacing="0.5">Core.Lang</text>
         <line x1="535.6" y1="255.64999999999998" x2="986.0" y2="255.64999999999998" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="1.5,3"/>
         <text x="1140" y="259.65" font-size="12.5" fill="#0F172A" text-anchor="end" textLength="144.0" lengthAdjust="spacingAndGlyphs">C# . TypeScript . Python</text>
