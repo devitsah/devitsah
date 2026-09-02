@@ -25,7 +25,11 @@ SOURCES = {
         "&count_private=true&hide_rank=true"
     ),
     "streak-frame.svg": (
-        "https://github-readme-streak-stats.herokuapp.com/"
+        # github-readme-streak-stats.herokuapp.com is not a live public
+        # instance (that name is only a placeholder used in the project's
+        # "deploy your own" docs). streak-stats.demolab.com is the actual
+        # public endpoint.
+        "https://streak-stats.demolab.com/"
         f"?user={USERNAME}&hide_border=true&background=FFFFFF&stroke=2563EB"
         "&ring=0891B2&fire=10B981&currStreakLabel=2563EB&sideLabels=475569"
         "&currStreakNum=0F172A&sideNums=0F172A&dates=94A3B8&titleColor=2563EB"
@@ -35,25 +39,37 @@ SOURCES = {
         f"?username={USERNAME}&layout=compact&hide_border=true"
         "&title_color=2563EB&text_color=475569&bg_color=FFFFFF"
     ),
-    "snake-frame.svg": (
-        f"https://raw.githubusercontent.com/{USERNAME}/{USERNAME}/output/github-snake.svg"
-    ),
+    # NOTE: the snake is intentionally NOT built into a frame here.
+    # Baking an animated SVG into a base64 data URI and nesting it via
+    # <image href="data:..."> inside another SVG does not reliably keep
+    # the SMIL animation running once GitHub renders it in a README
+    # (see https://github.com/github/markup/issues/1864) — you just get a
+    # frozen first frame. The snake stays a plain, unwrapped <img> pointing
+    # straight at the output branch instead; see README.md.
 }
 
 FALLBACK_SIZE = {
     "stats-frame.svg": (495, 195),
     "streak-frame.svg": (495, 195),
     "langs-frame.svg": (300, 300),
-    "snake-frame.svg": (880, 130),
 }
 
 UA = {"User-Agent": "Mozilla/5.0 (profile-card-builder)"}
 
 
-def fetch(url: str) -> bytes:
-    req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return r.read()
+def fetch(url: str, attempts: int = 3) -> bytes:
+    last_err = None
+    for i in range(attempts):
+        try:
+            req = urllib.request.Request(url, headers=UA)
+            with urllib.request.urlopen(req, timeout=45) as r:
+                return r.read()
+        except Exception as e:
+            last_err = e
+            if i < attempts - 1:
+                import time
+                time.sleep(3 * (i + 1))  # simple backoff for rate limits
+    raise last_err
 
 
 def intrinsic_size(svg_bytes: bytes, fallback):
